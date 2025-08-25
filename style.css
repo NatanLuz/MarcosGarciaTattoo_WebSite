@@ -1,0 +1,212 @@
+/* ================================
+   Costumização de CSS Global
+================================ */
+
+/* Base */
+html {
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(to bottom, #000000, #333333, #000000);
+}
+
+/* sessao otimizando e editando a Paleta de cores */
+:root {
+  --suede: #C4A484;
+  --suede-light: #D4B494;
+  --suede-dark: #B49474;
+}
+
+.dark {
+  --suede: #C4A484;
+  --suede-light: #D4B494;
+  --suede-dark: #B49474;
+  background: linear-gradient(to bottom, #000000, #222222, #000000);
+}
+
+/* ================================
+   sessao animações > reveal 
+================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal--in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================================
+   sessao de costumizaçao de scroll
+================================ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--suede);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--suede-dark);
+}
+
+/* ================================
+   sessao contendo Header + Nav
+================================ */
+header {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+nav a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--suede);
+  transition: width 0.1s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ================================
+   sessao do Portfolio do tatuador
+================================ */
+.portfolio-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-item img {
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.02);
+}
+
+/* ================================
+   sessao para editar o WhatsApp Button (float)
+================================ */
+.whatsapp-float {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(12, 12, 12, 0.7); }
+  70%  { box-shadow: 0 0 0 10px rgba(196, 164, 132, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(196, 164, 132, 0); }
+}
+
+/* ================================
+   sessao Botões simples
+================================ */
+.simple-contact-btn {
+  transition: opacity 0.2s ease;
+}
+.simple-contact-btn:hover {
+  opacity: 0.8;
+}
+
+/* ================================
+   sessao Responsividade
+================================ */
+@media (max-width: 768px) {
+  .container { padding: 0 1rem; }
+
+  .portfolio-item:hover,
+  .portfolio-item:hover img {
+    transform: none;
+  }
+}
+
+/* ================================
+   sessao Imagens
+================================ */
+img {
+  transition: opacity 0.3s ease;
+}
+img[loading]   { opacity: 0.8; }
+img:not([loading]) { opacity: 1; }
+
+/* ================================
+   sessao de Transições gerais
+================================ */
+/* (aplicado apenas em elementos que realmente precisam) */
+body, header, nav a, button, a, img {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* ================================
+   sessao Acessibilidade
+================================ */
+button:focus,
+a:focus {
+  outline: 2px solid var(--suede);
+  outline-offset: 2px;
+}
+
+/* ================================
+   sessao Print
+================================ */
+@media print {
+  .whatsapp-float,
+  button { display: none !important; }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* ================================
+   sessao hero
+================================ */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  background: url('img/fotofundosite.jpg') center/cover no-repeat;
+  z-index: 1;
+}
+
+.hero-background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+              rgba(0,0,0,0.7) 0%,
+              rgba(0,0,0,0.5) 50%,
+              rgba(0,0,0,0.8) 100%);
+  z-index: 2;
+}
