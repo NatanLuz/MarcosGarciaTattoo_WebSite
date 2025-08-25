@@ -41,12 +41,17 @@ It demonstrates:
 
 📁 Project Structure
 
-MarcosGarciaTattoo_WEBSITE/
-├── index.html          # Main page
-├── styles.css          # CSS styles
-├── script.js           # JavaScript interactions
-├── img/                # Image assets
-└── README.md           # Documentation
+MarcosGarciaTattoo_WEBSITE
+
+ index.html# Main page
+
+ styles.css# CSS styles
+
+ script.js# JavaScript interactions
+
+ img/# Image assets
+
+ README.md# Documentation
 
 
 #### Getting Started
