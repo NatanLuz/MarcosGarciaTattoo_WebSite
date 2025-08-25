@@ -3,7 +3,7 @@
 Site: https://marcos-garcia-tattoo-web-site.vercel.app/
 
 
-[![Preview do Site](./img/preview.png)](https://marcos-garcia-tattoo-web-site.vercel.app/)
+![Preview do site](img/preview.jpg)
 
 
 A modern, responsive portfolio website built for tattoo artist Marcos Garcia, designed to highlight his unique style, professional identity, and showcase of work.
