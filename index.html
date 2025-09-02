@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Marcos Garcia Tattoo</title>
+    <!-- Descrição para SEO profissional-->
+    <meta name="description" content="Estúdio profissional de tatuagem em Viamão - RS. Preto e cinza, coloridas e delicadas/realismo. Segurança, arte única e dedicação." />
+    <!-- Favicon personalizado usando .SVG -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>✦</text></svg>">
+    <!-- Carregamento do Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Creepster (fonte clássica de tatuagem) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+
+    <!-- Links para css-->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Configuração personalizada do Tailwind css-->
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // Habilita o modo escuro baseado em classe
+        theme: {
+          extend: {
+            colors: {
+              suede: '#C4A484', // Cor personalizada 'suede'
+            },
+            fontFamily: {
+              'tattoo': ['Creepster', 'cursive'],
+            },
+            container: {
+              center: true, // Centraliza o container
+              padding: {
+                DEFAULT: '1rem',
+                sm: '1.5rem',
+                lg: '2rem',
+                xl: '2.5rem',
+                '2xl': '3rem',
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Estilos CSS personalizados -->
+    <style>
+      /* Remove o highlight ao tocar em elementos no mobile */
+      html { -webkit-tap-highlight-color: transparent; }
+
+      /* Classes para animação de revelação de elementos */
+      .reveal {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity .6s ease, transform .6s ease;
+      }
+      .reveal--in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+
+  <!-- Corpo do documento apenas com modo escuro -->
+  <body class="bg-black text-zinc-100">
+    <!-- Cabeçalho com navegação fixa no topo -->
+    <header class="sticky top-0 z-50 border-b border-zinc-800/60 bg-[rgba(0,0,0,0.65)] backdrop-blur">
+      <nav class="container max-w-7xl py-3">
+        <div class="flex items-center justify-between md:grid md:grid-cols-3 md:items-center">
+          <!-- Logo/Nome do estúdio -->
+          <a href="#home" class="font-semibold tracking-wide text-zinc-900 dark:text-zinc-100 justify-self-start">Marcos Garcia Tattoo</a>
+
+          <!-- Menu de navegação para desktop (oculto em mobile) -->
+          <div class="hidden md:flex items-center gap-6 text-sm justify-self-center">
+            <a href="#home" class="hover:opacity-80">Início</a>
+            <a href="#sobre" class="hover:opacity-80">Sobre</a>
+            <a href="#portfolio" class="hover:opacity-80">Portfólio</a>
+            <a href="#avaliacoes" class="hover:opacity-80">Avaliações</a>
+            <a href="#diferenciais" class="hover:opacity-80">Diferenciais</a>
+            <a href="#localizacao" class="hover:opacity-80">Localização</a>
+            <a href="#contato" class="hover:opacity-80">Contato</a>
+          </div>
+
+          <!-- Apenas botão de menu mobile (removido o botão de alternância de tema) -->
+          <div class="flex items-center gap-3 justify-self-end">
+            <button id="menuToggle" class="md:hidden px-3 py-1.5 text-sm rounded-md border border-zinc-700 bg-zinc-900/60">Menu</button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Menu de navegação para mobile (inicialmente oculto) -->
+      <div id="mobileNav" class="md:hidden hidden border-t border-zinc-200/60 dark:border-zinc-800/60">
+        <div class="container max-w-7xl py-2 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+          <a href="#home" class="hover:opacity-80">Início </a>
+          <a href="#sobre" class="hover:opacity-80">Sobre</a>
+          <a href="#portfolio" class="hover:opacity-80">Portfólio</a>
+          <a href="#avaliacoes" class="hover:opacity-80">Avaliações</a>
+          <a href="#diferenciais" class="hover:opacity-80">Diferenciais</a>
+          <a href="#localizacao" class="hover:opacity-80">Localização</a>
+          <a href="#contato" class="hover:opacity-80">Contato</a>
+        </div>
+      </div>
+    </header>
+
+<!-- Seção Hero/Home -->
+<section id="home" class="hero-section relative reveal">
+  <div class="hero-background"></div>
+  <div class="container max-w-4xl mx-auto py-20 sm:py-24 text-center relative z-10">
+    <div class="max-w-2xl mx-auto">
+      <h1 class="text-5xl sm:text-7xl font-tattoo leading-tight text-white drop-shadow-2xl">
+        Marcos Garcia Tattoo
+      </h1>
+      <p class="mt-6 text-xl sm:text-3xl font-semibold text-zinc-100 drop-shadow-lg">
+        Arte em preto e cinza, colorida e realista.<br />
+        Estúdio profissional com foco em técnica, segurança e criatividade.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Seção Sobre o tatuador -->
+    <section id="sobre" class="border-t border-zinc-200/60 dark:border-zinc-800/60 reveal">
+      <div class="container max-w-6xl mx-auto py-12 sm:py-16">
+        <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div class="space-y-3 text-base leading-relaxed reveal">
+            <h3 class="text-xl font-semibold">Sobre o Artista</h3>
+            <p>Marcos Garcia é um tatuador profissional especializado. Com anos de experiência, une técnica, arte e cuidado em cada trabalho.</p>
+            <p>Cada tatuagem é feita com muito carinho e dedicação, criada com atenção aos detalhes e respeito pela pele do cliente. O compromisso com a excelência e a segurança são fundamentais em todos os procedimentos.</p>
+          </div>
+          <div class="w-full flex justify-center reveal">
+            <!-- Imagem do artista/estúdio -->
+            <img src="img/portfoliohome.jpg" alt="Tatuador profissional Marcos Garcia" class="w-full h-[380px] md:h-[460px] object-contain rounded-lg" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Portfólio -->
+    <section id="portfolio" class="border-t border-zinc-200/60 dark:border-zinc-800/60 reveal">
+      <div class="container max-w-6xl mx-auto py-16 sm:py-20 text-center">
+        <h2 class="text-2xl sm:text-3xl font-semibold mb-6">Portfólio</h2>
+
+        <!-- Subtítulo para Preto e Cinza / Realismo -->
+        <h3 class="text-xl sm:text-2xl font-medium mb-8 text-suede">Preto e Cinza/Realismo</h3>
+
+        <!-- Grid de imagens do portfólio preto e cinza e realismo -->
+        <div class="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+          <figure class="portfolio-item reveal">
+            <img src="img/pretoecinzaerealismo.jpg" alt="Tatuagem preto e cinza realismo" class="w-full h-64 md:h-72 object-cover rounded-lg" loading="lazy" />
+          </figure>
+          <figure class="portfolio-item reveal">
+            <img src="img/pretoecinzaerealismo1.jpg" alt="Tatuagem preto e cinza realismo" class="w-full h-64 md:h-72 object-cover rounded-lg" loading="lazy" />
+          </figure>
+          <figure class="portfolio-item reveal">
+            <img src="img/pretoecinzaerealismo2.jpg" alt="Tatuagem preto e cinza realismo" class="w-full h-64 md:h-72 object-cover rounded-lg" loading="lazy" />
+          </figure>
+          <figure class="portfolio-item reveal">
+            <img src="img/pretoecinzaerealismo3.jpg" alt="Tatuagem preto e cinza realismo" class="w-full h-64 md:h-72 object-cover rounded-lg" loading="lazy" />
+          </figure>
+          <figure class="portfolio-item reveal">
+            <img src="img/pretoecinzaerealismo4.jpg" alt="Tatuagem preto e cinza realismo" class="w-full h-64 md:h-72 object-cover rounded-lg" loading="lazy" />
+          </figure>
+          <figure class="portfolio-item reveal">
+            <img src="img/pretoecinzaerealismo5.jpg" alt="Tatuagem preto e cinza realismo" class="w-full h-64 md:h-72 object-cover rounded-lg" loading="lazy" />
+          </figure>
+          <figure class="portfolio-item reveal">
+            <img src="img/pretoecinzaerealismo6.jpg" alt="Tatuagem preto e cinza realismo" class="w-full h-64 md:h-72 object-cover rounded-lg" loading="lazy" />
+          </figure>
+          <figure class="portfolio-item reveal">
+            <img src="img/pretoecinzaerealismo7.jpg" alt="Tatuagem preto e cinza realismo" class="w-full h-64 md:h-72 object-cover rounded-lg" loading="lazy" />
+          </figure>
+          <figure class="portfolio-item reveal">
+            <img src="img/pretoecinzaerealismo8.jpg" alt="Tatuagem preto e cinza realismo" class="w-full h-64 md:h-72 object-cover rounded-lg" loading="lazy" />
+          </figure>
+          <figure class="portfolio-item reveal">
+            <img src="img/pretoecinzaerealismo9.jpg" alt="Tatuagem preto e cinza realismo" class="w-full h-64 md:h-72 object-cover rounded-lg" loading="lazy" />
+          </figure>
+          <figure class="portfolio-item reveal">
+            <img src="img/pretoecinzaerealismo10.jpg" alt="Tatuagem preto e cinza realismo" class="w-full h-64 md:h-72 object-cover rounded-lg" loading="lazy" />
+          </figure>
+          <figure class="portfolio-item reveal">
+            <img src="img/pretoecinzaerealismo11.jpg" alt="Tatuagem preto e cinza realismo" class="w-full h-64 md:h-72 object-cover rounded-lg" loading="lazy" />
+          </figure>
+        </div>
+
+        <!-- Subtítulo para Coloridas -->
+        <h3 class="text-xl sm:text-2xl font-medium mb-8 mt-16 text-suede">Coloridas</h3>
+
+        <!-- Grid de imagens do portfólio coloridas -->
+        <div class="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+          <figure class="portfolio-item reveal">
+            <img src="img/Coloridas.jpg" alt="Tatuagem colorida" class="w-full h-64 md:h-72 object-cover rounded-lg" loading="lazy" />
+          </figure>
+          <figure class="portfolio-item reveal">
+            <img src="img/Coloridas1.jpg" alt="Tatuagem colorida" class="w-full h-64 md:h-72 object-cover rounded-lg" loading="lazy" />
+          </figure>
+          <figure class="portfolio-item reveal">
+            <img src="img/Coloridas2.jpg" alt="Tatuagem colorida" class="w-full h-64 md:h-72 object-cover rounded-lg" loading="lazy" />
+          </figure>
+          <figure class="portfolio-item reveal">
+            <img src="img/Coloridas3.jpg" alt="Tatuagem colorida" class="w-full h-64 md:h-72 object-cover rounded-lg" loading="lazy" />
+          </figure>
+        </div>
+
+        <!-- Subtítulo para Letras -->
+        <h3 class="text-xl sm:text-2xl font-medium mb-8 mt-16 text-suede">Letras</h3>
+
+        <!-- Grid de imagens do portfólio letras -->
+        <div class="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+          <figure class="portfolio-item reveal">
+            <img src="img/letras1.jpg" alt="Tatuagem de letras" class="w-full h-64 md:h-72 object-cover rounded-lg" loading="lazy" />
+          </figure>
+          <figure class="portfolio-item reveal">
+            <img src="img/letras2.jpg" alt="Tatuagem de letras" class="w-full h-64 md:h-72 object-cover rounded-lg" loading="lazy" />
+          </figure>
+          <figure class="portfolio-item reveal">
+            <img src="img/letras3.jpg" alt="Tatuagem de letras" class="w-full h-64 md:h-72 object-cover rounded-lg" loading="lazy" />
+          </figure>
+          <figure class="portfolio-item reveal">
+            <img src="img/letras4.jpg" alt="Tatuagem de letras" class="w-full h-64 md:h-72 object-cover rounded-lg" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Avaliações -->
+    <section id="avaliacoes" class="border-t border-zinc-200/60 dark:border-zinc-800/60 reveal">
+      <div class="container max-w-6xl mx-auto py-16 sm:py-20">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-center">Avaliações</h2>
+        <p class="mt-2 text-zinc-700 dark:text-zinc-300 text-center">Confira as avaliações dos clientes</p>
+
+        <!-- Grid de imagens das avaliações -->
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 place-items-center">
+          <img src="img/avaliacao1.PNG" alt="Avaliação 1" class="w-full max-w-sm object-contain rounded-lg reveal" loading="lazy" />
+          <img src="img/avaliacao2.PNG" alt="Avaliação 2" class="w-full max-w-sm object-contain rounded-lg reveal" loading="lazy" />
+          <img src="img/avaliacao3.PNG" alt="Avaliação 3" class="w-full max-w-sm object-contain rounded-lg reveal" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Diferenciais -->
+    <section id="diferenciais" class="border-t border-zinc-200/60 dark:border-zinc-800/60 reveal">
+      <div class="container max-w-6xl mx-auto py-16 sm:py-20">
+        <h2 class="text-2xl sm:text-3xl font-semibold mb-8 text-center">Diferenciais</h2>
+        <!-- Grid de cards com os diferenciais -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 reveal">
+            <h3 class="font-semibold mb-2">Segurança</h3>
+            <p class="text-sm text-zinc-700 dark:text-zinc-300">Material esterilizado e ambiente higiênico para sua segurança.</p>
+          </div>
+          <div class="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 reveal">
+            <h3 class="font-semibold mb-2">Arte Única</h3>
+            <p class="text-sm text-zinc-700 dark:text-zinc-300">Toda tatuagem é desenhada de forma Personalizada.</p>
+          </div>
+          <div class="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 reveal">
+            <h3 class="font-semibold mb-2">Experiência</h3>
+            <p class="text-sm text-zinc-700 dark:text-zinc-300">Anos de experiência em diferentes estilos.</p>
+          </div>
+          <div class="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 reveal">
+            <h3 class="font-semibold mb-2">Dedicação</h3>
+            <p class="text-sm text-zinc-700 dark:text-zinc-300">Compromisso total com a satisfação do cliente</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Localização -->
+    <section id="localizacao" class="border-t border-zinc-200/60 dark:border-zinc-800/60 reveal">
+      <div class="container max-w-6xl mx-auto py-16 sm:py-20">
+        <h2 class="text-2xl sm:text-3xl font-semibold mb-8 text-center">Localização</h2>
+
+        <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div class="space-y-6">
+            <h3 class="text-xl font-semibold">Marcos Garcia Tattoo</h3>
+            <div class="space-y-2">
+              <p class="flex items-start">
+                <span class="inline-block w-5 mr-2 text-suede"><i class="fas fa-map-marker-alt"></i></span>
+                <span>Rua Santa Rita de Cássia, 209 Viamão - RS</span>
+              </p>
+              <p class="flex items-start">
+                <span class="inline-block w-5 mr-2 text-suede"><i class="fas fa-clock"></i></span>
+                <span>Segunda a Domingo: 08:00 às 18:00</span>
+              </p>
+            </div>
+          </div>
+          <div class="w-full">
+            <!-- Mapa incorporado do Google Maps -->
+            <div class="rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-800">
+              <iframe title="Mapa - Estúdio Marcos Garcia" class="w-full h-[280px] md:h-[320px] border-0" loading="lazy" src="https://www.google.com/maps?q=Rua%20Santa%20Rita%20de%20C%C3%A1ssia%2C%20209%20Viam%C3%A3o%20-%20RS&output=embed"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="border-t border-zinc-200/60 dark:border-zinc-800/60">
+      <div class="container max-w-6xl mx-auto py-16 sm:py-20 text-center">
+        <h2 class="text-2xl sm:text-3xl font-semibold mb-2">Contato</h2>
+        <p class="text-zinc-700 dark:text-zinc-300 mb-8">Agende sua sessão ou tire suas dúvidas</p>
+
+        <!-- Botões de contato simplificados -->
+        <div class="flex flex-wrap gap-4 items-center justify-center mb-10">
+          <a href="mailto:marcosmoreiragarcia@gmail.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-sm simple-contact-btn">
+            <img src="img/email.svg" alt="Email" class="w-5 h-5" />
+            <span>Email</span>
+          </a>
+          <a href="https://www.instagram.com/marcosgarcia.tattoo?igsh=MWdmMWVmN3R5djRieA==" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-sm simple-contact-btn">
+            <img src="img/instagram.svg" alt="Instagram" class="w-5 h-5" />
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.facebook.com/marcosgarcia.tattoo" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-sm simple-contact-btn">
+            <img src="img/facebook.svg" alt="Facebook" class="w-5 h-5" />
+            <span>Facebook</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="border-t border-zinc-200/60 dark:border-zinc-800/60 py-8 text-center text-xs text-zinc-600 dark:text-zinc-400">
+      <div class="container max-w-6xl mx-auto">© <span id="year"></span> Marcos Garcia Tattoo. Todos os direitos reservados.</div>
+      <div class="container max-w-6xl mx-auto">Desenvolvido por <a href="https://www.github.com/NatanLuz" target="_blank" rel="noopener" class="text-suede hover:opacity-80">Natan Da Luz</a></div>
+    </footer>
+
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://wa.me/555191638990?text=Ol%C3%A1%2C+tenho+interesse+em+realizar+uma+tatuagem+e+gostaria+de+um+or%C3%A7amento" target="_blank" rel="noopener" class="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 px-4 py-2 rounded-full shadow-lg border border-zinc-300 dark:border-zinc-700 bg-suede text-black hover:opacity-90 focus:outline-none print:hidden whatsapp-float">
+      <img src="img/whatsapp.svg" alt="WhatsApp" class="w-5 h-5" />
+      <span class="text-sm font-medium">Bora Riscar?</span>
+    </a>
+
+    <!-- Script JavaScript personalizado -->
+    <script src="script.js"></script>
+  </body>
+</html>
